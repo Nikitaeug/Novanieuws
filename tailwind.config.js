@@ -11,11 +11,17 @@ export default {
 
     theme: {
         extend: {
+            colors: {
+                'gradient-start': '#219EBC',
+                'gradient-end': '#FFB703',
+            },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
         },
+        backdropBlur: {},
     },
 
     plugins: [forms],
+    
 };

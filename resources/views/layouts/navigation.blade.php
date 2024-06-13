@@ -1,8 +1,8 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 dark:bg-gray-800 dark:border-gray-700">
-    <!-- Primary Navigation Menu -->
+<nav x-data="{ open: false }" class="border-b border-gray-100 bg-gradient-to-r from-gradient-start to-gradient-end dark:from-gray-800 dark:to-gray-700">    <!-- Primary Navigation Menu -->
     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
+                
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
@@ -11,22 +11,22 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('nieuws.index')" :active="request()->routeIs('nieuws')">
+                    <x-nav-link :href="route('nieuws.index')" :active="request()->routeIs('nieuws.index')">
                         {{ __('Nieuws') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('nieuws.create')" :active="request()->routeIs('create')">
+                    <x-nav-link :href="route('nieuws.create')" :active="request()->routeIs('nieuws.create')">
                         {{ __('Create an article') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('categories.index')" :active="request()->routeIs('index')">
+                    <x-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.index')">
                         {{ __('See categories') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('tags.index')" :active="request()->routeIs('index')">
+                    <x-nav-link :href="route('tags.index')" :active="request()->routeIs('tags.index')">
                         {{ __('See tags') }}
                     </x-nav-link>
                 </div>

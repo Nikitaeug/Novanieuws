@@ -21,7 +21,7 @@
                         <div class="grid grid-cols-2 gap-4">
                             @foreach ($news->take(4) as $newsItem)
                                 <div class="p-4 bg-gray-100 rounded-lg">
-                                    <h3 class="text-xl font-semibold">{{ $newsItem->title }}</h3>
+                                    <a href="{{ route('nieuws.show', $latestNews->id)}}"><h3 class="text-xl font-semibold">{{ $newsItem->title }}</h3></a>
                                     <p class="text-gray-600 dark:text-gray-300">{{Str::limit($newsItem->description, 100, $end='...') }}</p>
                                     <p class="text-gray-500 dark:text-gray-400">{{ $newsItem->created_at->format('F j, Y') }}</p>
                                 </div>
