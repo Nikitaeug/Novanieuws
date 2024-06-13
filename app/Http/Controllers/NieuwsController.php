@@ -49,7 +49,6 @@ class NieuwsController extends Controller
         $nieuws->user_id = auth()->id();
         $nieuws->title = $request->title;
         $nieuws->description = $request->content;
-        $nieuws->user_id = auth()->id();
         $nieuws->category_id = $request->category;
 
         $nieuws->save();
