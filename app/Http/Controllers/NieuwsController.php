@@ -66,7 +66,7 @@ class NieuwsController extends Controller
      */
     public function show($id)
     {
-        $news = Nieuws::findOrFail($id);
+        $news = Nieuws::findOrFail($id); // kan ook gewoon find maar dan moet je zelf checken of het bestaat en anders geeft het een error
         $comments = Commentaar::where('news_id', $id)->get();
         
         return view('nieuws.show', compact('news', 'comments'));
@@ -77,7 +77,7 @@ class NieuwsController extends Controller
      */
     public function edit(string $id)
 {
-    $nieuws = Nieuws::find($id);
+    $nieuws = Nieuws::find($id); // zoals hierboven kan ook gewoon findOrFail, maar hier is het niet nodig omdat we het zelf checken en zien of het bestaat
     $tags = Tag::all();
     $categories = Categorie::all();
 
@@ -124,7 +124,7 @@ class NieuwsController extends Controller
     }
     public function destroy($id)
     {
-        $news = Nieuws::find($id);
+        $news = Nieuws::find($id); // zoals hierboven kan ook gewoon findOrFail, maar hier is het niet nodig omdat we het zelf checken en zien of het bestaat
     
         if ($news) {
             // Detach all associated tags before deleting the news record

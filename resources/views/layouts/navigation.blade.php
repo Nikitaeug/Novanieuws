@@ -15,6 +15,12 @@
                         {{ __('Nieuws') }}
                     </x-nav-link>
                 </div>
+                {{-- my news --}}
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('nieuws.manage')" :active="request()->routeIs('nieuws.manage')">
+                        {{ __('My news') }}
+                    </x-nav-link>
+                </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('nieuws.create')" :active="request()->routeIs('nieuws.create')">
                         {{ __('Create an article') }}

@@ -31,7 +31,7 @@ Route::post('/nieuws', [NieuwsController::class, 'store'])->name('nieuws.store')
 Route::get('/nieuws/{id}/edit', [NieuwsController::class, 'edit'])->name('nieuws.edit');
 Route::patch('/nieuws/{id}', [NieuwsController::class, 'update'])->middleware('auth')->name('nieuws.update');
 Route::delete('/nieuws/{id}', [NieuwsController::class, 'destroy'])->name('nieuws.destroy');
-Route::get('/nieuws/manage', [NieuwsController::class, 'manage'])->middleware('auth');
+Route::get('/nieuws/manage', [NieuwsController::class, 'manage'])->middleware('auth')->name('nieuws.manage');
 Route::get('/nieuws/{id}', [NieuwsController::class, 'show'])->name('nieuws.show');
 
 //create a tag
