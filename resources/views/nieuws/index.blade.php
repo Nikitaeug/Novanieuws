@@ -1,13 +1,13 @@
 <x-app-layout>
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+        <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="overflow-hidden bg-white shadow-sm dark:bg-gray-800 sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <h1 class="text-3xl font-bold text-center">News Page</h1>
-                    <div class="mt-2 text-sm grid grid-cols-3 gap-4">
+                    <div class="grid grid-cols-3 gap-4 mt-2 text-sm">
                         @foreach ($news as $newsItem)
                             <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                                <a href="#">
+                                <a href="{{ route('nieuws.show', $newsItem->id) }}">
                                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$newsItem->title}}</h5>
                                 </a>
                                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{$newsItem->description}}</p>

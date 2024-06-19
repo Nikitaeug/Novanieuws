@@ -8,6 +8,7 @@
             type="text" 
             name="title" 
             id="title" 
+            value="{{ old('title') }}"
             class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
             @error('title')
                 <div class="alert alert-danger">{{ $message }}</div>
@@ -16,12 +17,18 @@
         
         <div class="mb-4">
             <label for="content" class="block mb-2 text-sm font-bold text-gray-700">Content:</label>
-            <textarea name="content" id="content" rows="5" class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"></textarea>
+            <textarea 
+            name="content" 
+            id="content" 
+            value="{{ old('content') }}"
+            rows="5" 
+            class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">
+            </textarea>
         </div>
         @error('content')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-    
+        {{-- categories --}}
         <div class="mb-4">
             <label for="category" class="block mb-2 text-sm font-bold text-gray-700">Category: <a href="/categories/create">Create a category?</a></label>
             <select name="category" id="category" class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline">

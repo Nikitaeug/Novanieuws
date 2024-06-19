@@ -16,7 +16,11 @@
                             <label for="title" class="block text-sm font-medium text-gray-700">
                                 Article Title
                             </label>
-                            <input type="text" name="title" id="title" value="{{$news->title}}" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <input type="text" 
+                            name="title" 
+                            id="title" 
+                            value="{{$news->title}}" 
+                            class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                         </div>
                     </div>
                     @error('title')
